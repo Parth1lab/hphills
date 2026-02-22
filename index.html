@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>HPHILLS | Casino Dashboard</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+:root{
+  --neon:#00ff99;
+  --dark:#0b0e11;
+  --card:#161a20;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Segoe UI, Arial, sans-serif;
+  background:var(--dark);
+  color:white;
+}
+
+/* HEADER */
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:14px 20px;
+  background:#111;
+  position:sticky;
+  top:0;
+}
+.logo{
+  color:var(--neon);
+  font-size:22px;
+  font-weight:800;
+}
+.balance{
+  background:var(--card);
+  padding:8px 14px;
+  border-radius:8px;
+  box-shadow:0 0 10px var(--neon);
+}
+
+/* LAYOUT */
+.container{display:flex}
+
+/* SIDEBAR */
+.sidebar{
+  width:220px;
+  background:#111;
+  padding:20px;
+  min-height:100vh;
+}
+.sidebar a{
+  display:block;
+  padding:12px;
+  margin-bottom:10px;
+  text-decoration:none;
+  color:white;
+  border-radius:8px;
+}
+.sidebar a:hover{
+  background:var(--card);
+  box-shadow:0 0 10px var(--neon);
+}
+
+/* MAIN */
+.main{
+  flex:1;
+  padding:25px;
+}
+.hero{
+  background:radial-gradient(circle,#0f5132,#0b0e11);
+  padding:40px;
+  border-radius:16px;
+  margin-bottom:30px;
+}
+.hero h1 span{color:var(--neon)}
+
+.games{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:20px;
+}
+.card{
+  background:var(--card);
+  padding:25px;
+  border-radius:16px;
+  text-align:center;
+  transition:.3s;
+}
+.card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 0 20px var(--neon);
+}
+.play{
+  margin-top:15px;
+  background:var(--neon);
+  border:none;
+  padding:10px;
+  width:100%;
+  border-radius:8px;
+  font-weight:700;
+  cursor:pointer;
+}
+
+/* MOBILE NAV */
+.mobile-nav{
+  display:none;
+  position:fixed;
+  bottom:0;
+  width:100%;
+  background:#111;
+  justify-content:space-around;
+  padding:10px 0;
+}
+.mobile-nav a{
+  color:white;
+  text-decoration:none;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .sidebar{display:none}
+  .mobile-nav{display:flex}
+  .main{padding-bottom:80px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">HPHILLS</div>
+  <div class="balance">💰 Balance: 0.00 (Demo)</div>
+</header>
+
+<div class="container">
+
+  <aside class="sidebar">
+    <a href="#">🎰 Casino</a>
+    <a href="#">🔥 Crash</a>
+    <a href="#">🎯 Dice</a>
+    <a href="#">🎡 Roulette</a>
+    <a href="#">🃏 Slots</a>
+    <a href="wallet.html">💰 Wallet</a>
+  </aside>
+
+  <main class="main">
+    <div class="hero">
+      <h1>Welcome to <span>HPHILLS</span></h1>
+      <p>Stake-style neon casino dashboard (Demo)</p>
+    </div>
+
+    <h2>Popular Games</h2>
+    <div class="games">
+      <div class="card">🚀<h3>Crash</h3><button class="play">Play</button></div>
+      <div class="card">🎯<h3>Dice</h3><button class="play">Play</button></div>
+      <div class="card">🎡<h3>Roulette</h3><button class="play">Play</button></div>
+      <div class="card">🃏<h3>Slots</h3><button class="play">Play</button></div>
+    </div>
+  </main>
+
+</div>
+
+<div class="mobile-nav">
+  <a href="#">🎰 Casino</a>
+  <a href="wallet.html">💰 Wallet</a>
+  <a href="#">👤 Profile</a>
+</div>
+
+</body>
+</html>
