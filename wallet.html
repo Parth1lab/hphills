@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>HPHILLS | Wallet</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+:root{
+  --neon:#00ff99;
+  --dark:#0b0e11;
+  --card:#161a20;
+}
+body{
+  margin:0;
+  font-family:Segoe UI, Arial;
+  background:var(--dark);
+  color:white;
+}
+header{
+  padding:15px 20px;
+  background:#111;
+  display:flex;
+  justify-content:space-between;
+}
+.logo{color:var(--neon);font-size:22px;font-weight:800}
+.container{padding:25px;max-width:900px;margin:auto}
+.wallet-card{
+  background:var(--card);
+  padding:25px;
+  border-radius:16px;
+  box-shadow:0 0 15px var(--neon);
+  margin-bottom:30px;
+}
+.balance{
+  font-size:32px;
+  font-weight:800;
+  color:var(--neon);
+}
+.btn{
+  background:var(--neon);
+  border:none;
+  padding:12px 20px;
+  border-radius:8px;
+  font-weight:700;
+  cursor:pointer;
+  margin-top:15px;
+}
+.methods{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:20px;
+}
+.method{
+  background:#111;
+  padding:20px;
+  border-radius:14px;
+  text-align:center;
+  transition:.3s;
+}
+.method:hover{
+  box-shadow:0 0 15px var(--neon);
+  transform:translateY(-5px);
+}
+.footer{
+  text-align:center;
+  margin-top:40px;
+  font-size:13px;
+  color:#aaa;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">HPHILLS</div>
+  <a href="index.html" style="color:white;text-decoration:none">⬅ Back</a>
+</header>
+
+<div class="container">
+
+  <div class="wallet-card">
+    <p>Available Balance</p>
+    <div class="balance">0.00 USDT</div>
+    <button class="btn">+ Deposit</button>
+  </div>
+
+  <h2>Deposit Methods (Demo)</h2>
+  <div class="methods">
+    <div class="method">💲<h3>USDT</h3><button class="btn">Select</button></div>
+    <div class="method">₿<h3>Bitcoin</h3><button class="btn">Select</button></div>
+    <div class="method">♦<h3>Ethereum</h3><button class="btn">Select</button></div>
+  </div>
+
+  <div class="footer">
+    Demo only • No real money • Responsible Gaming
+  </div>
+
+</div>
+
+</body>
+</html>
